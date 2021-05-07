@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <script src="javascript/script.js"></script>
+
+    <title>Midwestern Interactive</title>
+
+    <script>
+      
+      let mergeNoDuplicates = (target, source, prop) => {
+          source.forEach(sourceElement => {
+          let targetElement = target.find(targetElement => {
+              return sourceElement[prop] === targetElement[prop];
+          })
+          targetElement ? Object.assign(targetElement, sourceElement) : target.push(sourceElement);
+          })
+      };
+
+      let target = [
+          {name: "Matt Johnson"}, 
+          {name: "Bart Paden"}, 
+          {name: "Ryan Doss"}, 
+          {name: "Jared Malcolm"},
+      ];
+
+      let source = [
+          {name: "Matt Johnson"}, 
+          {name: "Bart Paden"}, 
+          {name: "Jordan Heigle"}, 
+          {name: "Tyler Viles"},
+      ];
+
+      mergeNoDuplicates(target, source, 'name');
+
+      function listOfNames() {
+          // if(clicked) {
+          //     alert("You've already clicked this.");
+          // } else {
+          //     console.log(target);
+          // }
+          console.log(target);
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+
+    <div class="jumbotron jumbotron-fluid">
+      <img src="img/mwi-logo-horizontal.png" alt="Midwestern Interactive logo">
+    </div>
+
+    <div class = "container-fluid">
+      <h1><u>HEADING ONE</u></h1>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-md-4 g-3">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Heading 2</h5>
+              <p class="card-text">This is a paragraph text that is meant to flex and wrap to a new line based on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+              <button type="button" class="btn-dark">Read More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" class="rounded-0">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Heading 2</h5>
+              <p class="card-text">This is a paragraph text that is meant to flex and wrap to a new line based on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+              <button type="button" class="btn-dark">Read More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Heading 2</h5>
+              <p class="card-text">This is a paragraph text that is meant to flex and wrap to a new line based on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+              <button type="button" class="btn-dark">Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="contactForm">
+
+      <h2 class="contactHeader mt-3">CONTACT</h2>
+
+      <form class="needs-validation mb-3 w-50 mx-auto" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email"
+          placeholder="" required>
+          <div class="invalid-feedback" style="text-align: right;">
+            Must use a valid email.
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="subject" class="form-control" id="subject"
+          placeholder="" required>
+          <div class="invalid-feedback" style="text-align: right;">
+            Subject is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <input type="message" class="form-control" id="message"
+          placeholder="" required>
+          <div class="invalid-feedback" style="text-align: right;">
+            Message is required.
+          </div>
+        </div>
+    
+        <div class="form-group mt-3">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    (function() {
+      window.addEventListener('load', function() {
+        let forms = document.getElementsByClassName('needs-validation');
+  
+        let validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+    <div class = "container-fluid pt-5">
+      <h1><u>HEADING ONE</u></h1>
+    </div>
+
+    <div class = "container-fluid">
+      <h6>Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when this <a id="listNames" href="#" onClick="listOfNames();return false;">link is clicked</a>, if the operation has been completed already notify the user that this has already been done.</h6>
+    </div>
+
+    
+
+    <div class="footer">
+      <i>Thanks for taking the Midwestern Interactive Benchmark Test.</i>
+    </div>
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

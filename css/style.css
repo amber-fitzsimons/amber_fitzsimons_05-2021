@@ -1,0 +1,122 @@
+
+/* Jumbotron */
+
+.jumbotron {
+background-color: white;
+padding-top: 6px;
+padding-bottom: 5px;
+border-bottom: 1.5px;
+border-bottom-color: black;
+border-bottom-style: solid; position: relative;
+}
+
+.jumbotron img {
+  width: 30%;
+  align-items: center;
+  position:relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Font sizes, colors, etc. */
+
+.card-title {
+  color: gray;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.card-text {
+  font-size: small;
+  color: gray;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.contactHeader {
+  color: white;
+  text-align: center;
+}
+
+.form-label {
+  color: white;
+}
+
+.label {
+  margin-bottom: 0px;
+}
+
+.needs-validation {
+  color: white;
+}
+
+.invalid-feedback {
+  font-size: xx-small;
+  color: red;
+  font-style: italic;
+  display: inline-block;
+  align-content: right;
+}
+
+#listNames {
+  color: red !important;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  font-size: x-small;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Containers */
+
+.container {
+  padding: 0% 10%
+}
+
+.container-fluid {
+  padding: 1% 5%
+}
+
+/* Card styling */
+
+* {
+  border-radius: 0 !important;
+}
+
+.card {
+  border-style: none;
+}
+
+.card-header {
+  background-color: lightgray;
+  height: 70px;
+}
+
+
+/* Buttons */
+
+.btn-dark {
+  background-color: black;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: black;
+  margin-bottom: 50px;
+}
+
+/* Rows */
+
+#contactForm {
+  background-color: lightgray;
+  font: white;
+}
+
+#message {
+  height: 200px;
+}

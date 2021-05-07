@@ -33,4 +33,4 @@ Amber FitzSimons
 
 Any details you'd like to mention about your code test.
 
----# amber_fitzsimons_05-2021
+The test was definitely challenging, I learned a lot while working on it. I know the JavaScript to merge the list of names and remove duplicates is right because I ran it in repl.it, but so far I haven't been able to make it work as requested in the html. I will continue to work on it, though! 
